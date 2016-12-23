@@ -5,8 +5,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
  
 var paths = {
-  src: ['myfirstng/src/*.js'],
-  dist: 'myfirstng/dist/'
+  src: ['src/*.js'],
+  dist: 'dist/'
 };
  
 
