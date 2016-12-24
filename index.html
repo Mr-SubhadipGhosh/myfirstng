@@ -6,12 +6,43 @@
     </head>
     <body ng-app="myapp">
         <div ng-controller="mycontroller">
-            <input type="text" ng-model="name">
+            <table> 
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" ng-model="idField"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" ng-model="nameField"/></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" ng-model="addrField"/></td>
+                </tr>
+                <tr>
+                    <td><button ng-click="resetIt()" >Reset</button></td>
+                    <td><button ng-click="saveIt()" >Save</button></td>
+                </tr>
+            </table>
+            <!--<input type="text" ng-model="name">
             {{name}}
-            <button ng-click="clickMe()">CLick me</button>
-            <ul>
+            <button ng-click="clickMe()">CLick me</button>-->
+            <!--<ul>
                 <li ng-repeat="item in nameList"> {{item}}</li>
-            </ul>
+            </ul>-->
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                </tr>
+                <tr ng-repeat="item in items">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.addr}}</td>
+                    <td><button ng-click="editIt(item.id)">Edit</button></td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
