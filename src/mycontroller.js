@@ -4,6 +4,11 @@ myapp.controller('mycontroller',function($scope ,emp, serv, fact){
    // emp.reSetLang('german');
     vm.items= fact.items;
     vm.val = 0;
+    serv.getDataPromis().then(function(val){
+        console.log(val);
+    },function(err){
+        console.log(err);
+    });
     vm.saveIt = function(){
         fact.saveIt(vm);
         vm.resetIt();
