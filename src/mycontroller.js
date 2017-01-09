@@ -21,7 +21,7 @@ myapp.controller('mycontroller',function($scope ,$location,emp, serv, fact){
         vm.addrField = '';
     };
     vm.editIt = function(id){
-        $location.path('/add/'+id);
+        $location.path('/edit/'+id);
        if(id){
      var item = vm.items.filter(function(val){
             return val.id === id;

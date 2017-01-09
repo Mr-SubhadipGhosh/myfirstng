@@ -1,7 +1,7 @@
 function routerConf($routeProvider, $locationProvider){
 $locationProvider.hashPrefix('');
 $routeProvider
-    .when("/add/:ID", {
+    .when("/edit/:ID", {
         templateUrl : "./template/templateform.html"
     })
     .when("/add", {
