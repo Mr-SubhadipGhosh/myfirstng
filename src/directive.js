@@ -4,7 +4,7 @@ myapp.directive('inputEx', function(){
             model:"=",
             label: "@"
         },
-        template:'<div style="color:red; background:yellow; width:200px">{{label}}<input type="text" ng-model="model"/></div>',
+        template:'<div style="color:red; background:yellow; width:200px">{{label}}<input type="text" ng-model="model"/></div>',//templateUrl: './template/templateinput.html',
         controller: 'mycontroller',
         controllerAs: 'vm'
     };
