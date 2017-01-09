@@ -10,7 +10,7 @@ myapp.service('serv', function ($http, $q) {
     };
     this.getDataPromis = function () {
         var deferred = $q.defer();
-        $http.get('MOCK_DATA.json').then(function (data) {
+        $http.get('http://localhost:3003/info/1').then(function (data) {
                 deferred.resolve(data.data);
             },function (msg, code) {
                 deferred.reject(msg);
