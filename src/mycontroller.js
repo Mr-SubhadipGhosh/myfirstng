@@ -1,9 +1,10 @@
-myapp.controller('mycontroller',function($scope ,emp, serv, fact){    
+myapp.controller('mycontroller',function($scope ,$location,emp, serv, fact){    
     var vm = this;
     //console.log('controller', emp.test );
    // emp.reSetLang('german');
     vm.items= fact.items;
     vm.val = 0;
+    
     serv.getDataPromis().then(function(val){
         console.log(val);
     },function(err){
@@ -20,7 +21,9 @@ myapp.controller('mycontroller',function($scope ,emp, serv, fact){
         vm.addrField = '';
     };
     vm.editIt = function(id){
-        var item = vm.items.filter(function(val){
+        $location.path('/add/'+id);
+       if(id){
+     var item = vm.items.filter(function(val){
             return val.id === id;
         });  
         
@@ -30,6 +33,7 @@ myapp.controller('mycontroller',function($scope ,emp, serv, fact){
             vm.nameField = item[0].name;
             vm.addrField = item[0].addr;
         }
+    }
     };
     $scope.$watch('vm.val', function(newval,oldval){
         console.log(oldval,newval);

@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Mr-SubhadipGhosh/myfirstng#readme",
   "dependencies": {
-    "angular": "^1.6.0",
+    "angular": "1.6.0",
+    "angular-route": "1.6.0",
     "lodash": "^4.17.2"
   },
   "devDependencies": {
