@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "start": "watch-http-server ./ -o -p 3000 -a localhost",
-    "test": "karma start"
+    "test": "karma start",
+    "dataserv" :  "json-server -p 3003 -w MOCK_DATA.json"
   },
   "repository": {
     "type": "git",
