@@ -1,4 +1,5 @@
 var yourapp =  angular.module("yourapp",[]);
+
 var routerConf = require('./routing');
 var addctrl = require('./addcontroller');
 var listctrl = require('./listcontroller');
@@ -7,6 +8,7 @@ var fact = require('./factory');
 var convert = require('./filter');
 var emp=require('./provider');
 var serv = require('./service');
+
 var myapp = angular.module("myapp",['yourapp','ngRoute']);
 function conf(empProvider){
     var ll= 'english';
