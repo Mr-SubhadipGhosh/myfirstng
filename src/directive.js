@@ -1,21 +1,16 @@
-myapp.directive('inputEx', function(){
+module.exports =  function(){
     return {
+        restrict: 'E',
         scope:{
             model:"=",
             label: "@"
         },
         //template:'<div style="color:red; background:yellow; width:200px">{{label}}<input type="text" ng-model="model"/></div>',
-        templateUrl: './template/templateinput.html',
-        controller: 'mycontroller',
-        controllerAs: 'vm'
-    };
-});
+        templateUrl: './templateinput.html',
+        // controller: 'addctrl',
+        // controllerAs: 'vm',
+        link: function(scope, element, attr){
 
-myapp.directive('inputExTrue', function(){
-    return {
-        scope:true,
-        template:'<div style="color:red; background:yellow; width:200px">{{label}}<input type="text" ng-model="vm.addrField"/></div>',
-        // controller: 'mycontroller',
-        // controllerAs: 'vm'
+        }
     };
-})
+};

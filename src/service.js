@@ -1,8 +1,8 @@
-myapp.service('serv', function ($http, $q) {
+module.exports= function ($http, $q) {
     this.test = 'emp1';
 
     this.getData = function () {
-        $http.get("MOCK_DATA.json")
+        $http.get("http://localhost:3003/info/1")
             .then(function (response) {
                 this.data = response.data;
                 console.log('only http',this.data);
@@ -18,4 +18,4 @@ myapp.service('serv', function ($http, $q) {
             });
         return deferred.promise;
     }
-});
+}

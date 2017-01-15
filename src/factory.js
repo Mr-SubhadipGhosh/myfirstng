@@ -1,4 +1,4 @@
-myapp.factory('fact',function(){
+module.exports = function(){
 return{
     items: [],
     saveIt : function(vm){
@@ -21,4 +21,4 @@ return{
         }
     }
 }
-});
+}

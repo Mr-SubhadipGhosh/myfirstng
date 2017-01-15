@@ -1,4 +1,4 @@
-myapp.provider('emp', function(){
+module.exports= function(){
     this.lang = "";
     this.setLang = function(val){
         console.log(val);
@@ -16,4 +16,4 @@ myapp.provider('emp', function(){
         };
         return  new itemObj();
     }
-});
+}
