@@ -9,7 +9,7 @@ module.exports =  function($scope ,$location,emp, serv, fact){
         console.log('fail',err);
     });   
     vm.editIt = function(id){
-        $location.path('/edit/'+id);
+        $location.path('/edit/'+id+'/test');
        
     };
 };

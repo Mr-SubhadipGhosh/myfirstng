@@ -1,7 +1,8 @@
-module.exports =  function($scope ,$location,emp, serv, fact){    
+module.exports =  function($scope ,$location,emp, newfact, serv, fact, $routeParams){    
     var vm = this;
-    
-    var _itemid = 1;//$routeParams.itemId;    
+    console.log(newfact.items);
+    var _itemid = $routeParams.ID; 
+    console.log($routeParams.Name);
     //console.log('controller', emp.test );
    // emp.reSetLang('german');
 
