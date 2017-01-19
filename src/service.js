@@ -5,7 +5,7 @@ module.exports= function ($http, $q) {
         $http.get("http://localhost:3003/info/1")
             .then(function (response) {
                 this.data = response.data;
-                console.log('only http',this.data);
+                //console.log('only http',this.data);
             });
     };
     this.getDataPromis = function () {

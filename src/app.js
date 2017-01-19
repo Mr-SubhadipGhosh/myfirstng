@@ -15,7 +15,7 @@ function conf(empProvider){
     var ll= 'english';
     empProvider.setLang(ll);
     empProvider.xyz();
-    console.log('config');
+    //console.log('config');
 }
 myapp.config(routerConf);
 

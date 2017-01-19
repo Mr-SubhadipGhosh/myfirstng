@@ -26,9 +26,9 @@ if(_itemid){
     serv.getData();
     var pro = serv.getDataPromis();
     pro.then(function(val){
-        console.log('success',val);
+        //console.log('success',val);
     },function(err){
-        console.log('fail',err);
+        //console.log('fail',err);
     });
     vm.saveIt = function(){
         fact.saveIt(vm);

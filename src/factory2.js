@@ -17,7 +17,7 @@ return{
         else{
             vm.items.push({id:vm.idField, name: vm.nameField, addr: vm.addrField});
             this.items= vm.items;
-            console.log(this.items);
+            //console.log(this.items);
         }
     }
 }
