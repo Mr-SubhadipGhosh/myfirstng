@@ -41,3 +41,4 @@ gulp.task('watch', function() {
 });
  
 gulp.task('default', ['watch', 'scripts', 'others']);
+gulp.task('build', ['scripts', 'others']);
