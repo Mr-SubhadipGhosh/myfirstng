@@ -6,7 +6,8 @@ var del = require('del');
 var browserify =  require('gulp-browserify'); 
  
 var paths = {
-  src: ['src/app.js'],
+  entry: 'src/app.js',
+  src: ['src/*.js'],
   dist: 'dist/',
   otherSrc: ['template/*.html','node_modules/angular-route/angular-route.min.js','node_modules/angular/angular.min.js']
 };
@@ -22,7 +23,7 @@ gulp.task('scripts', ['clean'], function() {
   //     .pipe(concat('app.js'))
   //   .pipe(sourcemaps.write())
   //   .pipe(gulp.dest(paths.dist));
-  return gulp.src(paths.src[0])
+  return gulp.src(paths.entry)
         .pipe(browserify({
           insertGlobals : true,
           debug : true
