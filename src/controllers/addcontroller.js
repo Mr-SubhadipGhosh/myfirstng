@@ -1,5 +1,6 @@
 module.exports =  function($scope ,$location,emp, newfact, serv, fact, $routeParams){    
     var vm = this;
+    vm.info="Name";
     console.log(newfact.items);
     var _itemid = $routeParams.ID; 
     console.log($routeParams.Name);

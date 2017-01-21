@@ -1,15 +1,15 @@
 var yourapp =  angular.module("yourapp",[]);
 
 var routerConf = require('./routing');
-var addctrl = require('./addcontroller');
-var listctrl = require('./listcontroller');
-var inputex = require('./directive');
-var inputvalidation = require('./subdirective');
-var fact = require('./factory');
-var fact2 = require('./factory2');
-var convert = require('./filter');
-var emp=require('./provider');
-var serv = require('./service');
+var addctrl = require('./controllers/addcontroller');
+var listctrl = require('./controllers/listcontroller');
+var longLabel = require('./directives/directive');
+var infoLabel = require('./directives/subdirective');
+var fact = require('./factories/factory');
+var fact2 = require('./factories/factory2');
+var convert = require('./filters/filter');
+var emp=require('./services/provider');
+var serv = require('./services/service');
 
 var myapp = angular.module("myapp",['yourapp','ngRoute']);
 function conf(empProvider){
@@ -22,8 +22,8 @@ myapp.config(routerConf);
 
 myapp.controller('addctrl',addctrl);
 myapp.controller('listctrl',listctrl);
-myapp.directive('inputEx',inputex);
-myapp.directive('inputVal',inputvalidation);
+myapp.directive('longLabel',longLabel);
+myapp.directive('infoLabel',infoLabel);
 myapp.factory('fact',fact);
 myapp.factory('newfact',fact2);
 myapp.filter('convert',convert);

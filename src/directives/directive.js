@@ -2,23 +2,20 @@ module.exports =  function(){
     return {
         restrict: 'E',
         scope:{
-            model:"=",
-            label: "="
+            info:"=",
+            label: "@"
         },
-        templateUrl: './templateinput.html',
+        templateUrl: './templatelonglabel.html',
         controller: function(){
-           console.log('ctrl',this);
             this.changeLabel= function() {
-                console.log('tttttt');
-                this.label =  this.label+ " is required.";
-            }
+            } 
          }, 
         controllerAs: 'vm',
         bindToController: true,
         transclude: true,
         link: function(scope, element, attr){
             console.log('link',scope.label);
-            element.css({'border':"solid 5px yellow",'color':"yellow"});
+            element.css({'color':"red"});
         }
     };
 };

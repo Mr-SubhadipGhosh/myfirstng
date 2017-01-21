@@ -5,4 +5,4 @@ node_js:
   - 6.0
 
   script:
-   - gulp build
+   - gulp

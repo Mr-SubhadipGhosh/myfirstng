@@ -7,9 +7,9 @@ var browserify =  require('gulp-browserify');
  
 var paths = {
   entry: 'src/app.js',
-  src: ['src/*.js'],
+  src: ['src/**/*.js'],
   dist: 'dist/',
-  otherSrc: ['template/*.html','node_modules/angular-route/angular-route.min.js','node_modules/angular/angular.min.js']
+  otherSrc: ['template/*.html','css/*.css','node_modules/angular-route/angular-route.min.js','node_modules/angular/angular.min.js']
 };
 
 gulp.task('clean', function() {
@@ -17,18 +17,12 @@ gulp.task('clean', function() {
 });
  
 gulp.task('scripts', ['clean'], function() {
-  // return gulp.src(paths.src)
-  //   .pipe(sourcemaps.init())
-  //     .pipe(uglify({ mangle: false }))
-  //     .pipe(concat('app.js'))
-  //   .pipe(sourcemaps.write())
-  //   .pipe(gulp.dest(paths.dist));
   return gulp.src(paths.entry)
         .pipe(browserify({
           insertGlobals : true,
           debug : true
         }))
-        //.pipe(uglify({ mangle: false }))
+        .pipe(uglify({ mangle: false }))
         .pipe(gulp.dest(paths.dist));
 });
  gulp.task('others',['scripts'],function(){
@@ -37,7 +31,7 @@ gulp.task('scripts', ['clean'], function() {
  });
 gulp.task('watch', function() {
   var srcPath = JSON.parse(JSON.stringify(paths.src));
-  srcPath.push(paths.otherSrc);
+  srcPath.push(paths.otherSrc[0]);
   gulp.watch(srcPath, ['others']);
 });
  
