@@ -9,7 +9,7 @@ var paths = {
   entry: 'src/app.js',
   src: ['src/**/*.js'],
   dist: 'dist/',
-  otherSrc: ['template/*.html','css/*.css','node_modules/angular-route/angular-route.min.js','node_modules/angular/angular.min.js']
+  otherSrc: ['MOCK_DATA.json','template/*.html','css/*.css','node_modules/angular-route/angular-route.min.js','node_modules/angular/angular.min.js']
 };
 
 gulp.task('clean', function() {

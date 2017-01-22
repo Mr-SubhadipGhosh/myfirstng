@@ -1,7 +1,7 @@
 module.exports =  function(){
     return {
         restrict: 'E',
-        template: '<a>{{label}}</a>',
+        template: '<a>{{info}}</a>',
         scope: true,
         require:'^longLabel',
         controller: function () {
@@ -9,7 +9,7 @@ module.exports =  function(){
         },
        link:function(scope,elemnt,attr,ctrl){
            console.log('sub',ctrl);
-           scope.label = ctrl.info;
+           scope.info = ctrl.info;
        }
     };
 };

@@ -9,7 +9,7 @@ module.exports =  function($scope ,$location,emp, newfact, serv, fact, $routePar
 
     vm.items= fact.items;
     vm.val = 0;
-
+vm.pinField ="dfd";
 
 if(_itemid){
      var item = vm.items.filter(function(val){
@@ -32,6 +32,7 @@ if(_itemid){
         //console.log('fail',err);
     });
     vm.saveIt = function(){
+        console.log(vm.pinField);
         fact.saveIt(vm);
         vm.resetIt();
         vm.val = vm.val + 1;

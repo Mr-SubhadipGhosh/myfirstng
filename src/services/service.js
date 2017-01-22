@@ -2,7 +2,7 @@ module.exports= function ($http, $q) {
     this.test = 'emp1';
 
     this.getData = function () {
-        $http.get("http://localhost:3003/info/1")
+        $http.get("MOCK_DATA.json")
             .then(function (response) {
                 this.data = response.data;
                 //console.log('only http',this.data);
@@ -11,7 +11,7 @@ module.exports= function ($http, $q) {
     this.getDataPromis = function () {
         var deferred = $q.defer();
         
-        $http.get('http://localhost:3003/info').then(function (data) {
+        $http.get('MOCK_DATA.json').then(function (data) {
                 deferred.resolve(data.data);
             },function (msg, code) {
                 deferred.reject(msg);
